@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <img src="images/logo.svg" alt="App Logo">
+    </header>
+    <main class="main">
+        <div class="app">
+            <!-- Input section -->
+            <div class="app__input">
+                <div class="app__bill">
+                    <div class="field">
+                        <div class="field__info">
+                            <label for="inpBill" class="field__label">Bill</label>
+                            <span class="field__message">Can't be zero</span>
+                        </div>
+                        <div class="field__input-icon">
+                            <input type="number" class="field__input" id="inpBill" name="bill" placeholder="0">
+                            <img src="images/icon-dollar.svg" class="field__icon" alt="Dolar Icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app__tip">
+                    <div class="field">
+                        <div class="field__info">
+                            <label class="field__label">Select Tip %</label>
+                        </div>
+
+                        <div class="app__tip__options">
+                            <button class="btn" data-tip-value="5">5%</button>
+                            <button class="btn" data-tip-value="10">10%</button>
+                            <button class="btn" data-tip-value="15">15%</button>
+                            <button class="btn" data-tip-value="25">25%</button>
+                            <button class="btn" data-tip-value="50">50%</button>
+                            <input type="number" name="tipCustom" id="inpTipCusom" placeholder="Custom">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app__people">
+                    <div class="field">
+                        <div class="field__info">
+                            <label for="inpNumberOfPeople" class="field__label">Number of People</label>
+                            <span class="field__message">Can't be zero</span>
+                        </div>
+                        <div class="field__input-icon">
+                            <input type="number" min="0" step="1" class="field__input" id="inpNumberOfPeople"
+                                name="numberOfPeople" placeholder="0">
+                            <img src="images/icon-person.svg" class="field__icon" alt="Person Icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total section -->
+            <div class="app__total">
+                <div class="app__total__result">
+                    <div class="app__total__desc">
+                        <strong>Tip Amount
+                            <span>/ person</span>
+                        </strong>
+                    </div>
+                    <div class="app__total__value"><span id="tipAmountValue">$0.00</span></div>
+                </div>
+
+                <div class="app__total__result">
+                    <div class="app__total__desc">
+                        <strong>Total
+                            <span>/ person</span>
+                        </strong>
+                    </div>
+                    <div class="app__total__value"><span id="totalValue">$0.00</span></div>
+                </div>
+
+                <div class="app__total__reset">
+                    <button type="button" id="btnReset" class="btn btn--secondary" disabled>Reset</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Your Name Here</a>.
+        </div>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
